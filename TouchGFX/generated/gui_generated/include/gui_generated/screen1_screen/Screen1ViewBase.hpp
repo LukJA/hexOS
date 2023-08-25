@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/containers/scrollers/ScrollList.hpp>
 #include <gui/containers/line.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -34,6 +35,50 @@ public:
         // Override and implement this function in Screen1
     }
     virtual void callbackhdlr_bdel()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_b1()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_b2()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_b3()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_b4()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_b5()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_bplus()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_bac()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_beq()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_bdec()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_bhex()
+    {
+        // Override and implement this function in Screen1
+    }
+    virtual void callbackhdlr_bbin()
     {
         // Override and implement this function in Screen1
     }
@@ -77,8 +122,21 @@ protected:
     touchgfx::ButtonWithLabel b_3;
     touchgfx::Line line1;
     touchgfx::PainterRGB565 line1Painter;
+    touchgfx::Line line2;
+    touchgfx::PainterRGB565 line2Painter;
     touchgfx::ScrollList scrollList1;
     touchgfx::DrawableListItems<line, 9> scrollList1ListItems;
+    touchgfx::Box box1;
+    touchgfx::TextAreaWithOneWildcard textleft;
+    touchgfx::TextAreaWithOneWildcard textright;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTLEFT_SIZE = 13;
+    touchgfx::Unicode::UnicodeChar textleftBuffer[TEXTLEFT_SIZE];
+    static const uint16_t TEXTRIGHT_SIZE = 16;
+    touchgfx::Unicode::UnicodeChar textrightBuffer[TEXTRIGHT_SIZE];
 
 private:
 

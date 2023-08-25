@@ -15,3 +15,4 @@ void line::updateTxt(int newValue)
   Unicode::snprintf(textAreaBuffer, 32, "%d", newValue);
   textArea.invalidate();
 }
+

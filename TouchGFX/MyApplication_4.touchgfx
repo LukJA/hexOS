@@ -451,7 +451,7 @@
           {
             "Type": "Line",
             "Name": "line1",
-            "X": 252,
+            "X": 247,
             "Width": 15,
             "Height": 272,
             "EndY": 272.0,
@@ -459,17 +459,71 @@
             "LineEndingStyle": "Round"
           },
           {
+            "Type": "Line",
+            "Name": "line2",
+            "Y": 239,
+            "Width": 247,
+            "Height": 27,
+            "EndX": 300.0,
+            "LineWidth": 3.0,
+            "LineEndingStyle": "Round"
+          },
+          {
             "Type": "ScrollList",
             "Name": "scrollList1",
             "Width": 240,
-            "Height": 272,
+            "Height": 239,
             "Snapping": true,
             "ItemTemplateName": "line",
-            "NumberofItems": 5,
+            "NumberofItems": 1,
             "Easing": "Back",
             "EasingOption": "InOut",
             "SwipeAcceleration": 1.0,
             "DragAcceleration": 1.0
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Y": 241,
+            "Width": 247,
+            "Height": 31,
+            "Color": {
+              "Red": 20,
+              "Green": 224,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textleft",
+            "X": 8,
+            "Y": 247,
+            "Width": 58,
+            "Height": 19,
+            "TextId": "__SingleUse_ZVK7",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_X3C5",
+              "UseBuffer": true,
+              "BufferSize": 13
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textright",
+            "X": 200,
+            "Y": 247,
+            "Width": 40,
+            "Height": 19,
+            "TextId": "__SingleUse_E69N",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_XPSO",
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
           }
         ],
         "Interactions": [
@@ -494,6 +548,127 @@
               "Type": "ActionCustom",
               "FunctionName": "callbackhdlr_bdel"
             }
+          },
+          {
+            "InteractionName": "b1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_b1"
+            }
+          },
+          {
+            "InteractionName": "b2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_b2"
+            }
+          },
+          {
+            "InteractionName": "b3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_b3"
+            }
+          },
+          {
+            "InteractionName": "b4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_4"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_b4"
+            }
+          },
+          {
+            "InteractionName": "b5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_5"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_b5"
+            }
+          },
+          {
+            "InteractionName": "bplus",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_plus"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_bplus"
+            }
+          },
+          {
+            "InteractionName": "bac",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_ac"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_bac"
+            }
+          },
+          {
+            "InteractionName": "beq",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_eq_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_beq"
+            }
+          },
+          {
+            "InteractionName": "bdec",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_dec"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_bdec"
+            }
+          },
+          {
+            "InteractionName": "bhex",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_hex"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_bhex"
+            }
+          },
+          {
+            "InteractionName": "bbin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b_bin"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "callbackhdlr_bbin"
+            }
           }
         ]
       }
@@ -502,15 +677,15 @@
       {
         "Name": "line",
         "Width": 240,
-        "Height": 35,
+        "Height": 30,
         "Components": [
           {
             "Type": "TextArea",
             "Name": "textArea",
-            "X": 12,
-            "Y": 5,
-            "Width": 217,
-            "Height": 25,
+            "X": 21,
+            "Y": 3,
+            "Width": 203,
+            "Height": 24,
             "TextId": "__SingleUse_X7B9",
             "TextRotation": "0",
             "AutoSize": true,

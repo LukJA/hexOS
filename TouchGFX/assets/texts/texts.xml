@@ -6,6 +6,18 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_XPSO" Alignment="Left" TypographyId="medium">
+        <Translation Language="GB">other</Translation>
+      </Text>
+      <Text Id="__SingleUse_X3C5" Alignment="Left" TypographyId="medium">
+        <Translation Language="GB">decimal</Translation>
+      </Text>
+      <Text Id="__SingleUse_E69N" Alignment="Right" TypographyId="medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZVK7" Alignment="Left" TypographyId="medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_7U02" Alignment="Left" TypographyId="medium">
         <Translation Language="GB">0000000000000000</Translation>
       </Text>
@@ -13,7 +25,7 @@
         <Translation Language="GB">=</Translation>
       </Text>
       <Text Id="__SingleUse_X7B9" Alignment="Right" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;X</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_29ZQ" Alignment="Center" TypographyId="medium">
         <Translation Language="GB">hex</Translation>

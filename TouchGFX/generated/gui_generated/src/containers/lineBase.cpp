@@ -8,8 +8,8 @@
 lineBase::lineBase()
 {
     setWidth(240);
-    setHeight(35);
-    textArea.setXY(12, 5);
+    setHeight(30);
+    textArea.setXY(21, 3);
     textArea.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea.setLinespacing(0);
     Unicode::snprintf(textAreaBuffer, TEXTAREA_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_7U02).getText());

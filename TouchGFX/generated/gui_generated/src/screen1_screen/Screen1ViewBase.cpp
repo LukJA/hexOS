@@ -26,6 +26,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_eq_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4XFA));
     b_eq_1.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_eq_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_eq_1.setAction(buttonCallback);
     add(b_eq_1);
 
     b_0.setXY(262, 100);
@@ -41,6 +42,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_4.setLabelText(touchgfx::TypedText(T___SINGLEUSE_G42G));
     b_4.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_4.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_4.setAction(buttonCallback);
     add(b_4);
 
     b_5.setXY(306, 143);
@@ -48,6 +50,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_5.setLabelText(touchgfx::TypedText(T___SINGLEUSE_OZSK));
     b_5.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_5.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_5.setAction(buttonCallback);
     add(b_5);
 
     b_6.setXY(306, 187);
@@ -104,6 +107,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_plus.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4H15));
     b_plus.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_plus.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_plus.setAction(buttonCallback);
     add(b_plus);
 
     b_del.setXY(262, 53);
@@ -119,6 +123,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_ac.setLabelText(touchgfx::TypedText(T___SINGLEUSE_P3KG));
     b_ac.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_ac.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_ac.setAction(buttonCallback);
     add(b_ac);
 
     b_dec.setXY(395, 9);
@@ -126,6 +131,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_dec.setLabelText(touchgfx::TypedText(T___SINGLEUSE_FSQG));
     b_dec.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_dec.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_dec.setAction(buttonCallback);
     add(b_dec);
 
     b_decimal.setXY(395, 53);
@@ -140,6 +146,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_bin.setLabelText(touchgfx::TypedText(T___SINGLEUSE_5NAW));
     b_bin.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_bin.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_bin.setAction(buttonCallback);
     add(b_bin);
 
     b_hex.setXY(306, 53);
@@ -147,6 +154,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_hex.setLabelText(touchgfx::TypedText(T___SINGLEUSE_29ZQ));
     b_hex.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_hex.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_hex.setAction(buttonCallback);
     add(b_hex);
 
     b_minus.setXY(437, 143);
@@ -196,6 +204,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Z5J9));
     b_1.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_1.setAction(buttonCallback);
     add(b_1);
 
     b_2.setXY(262, 187);
@@ -203,6 +212,7 @@ Screen1ViewBase::Screen1ViewBase() :
     b_2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_W58K));
     b_2.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_2.setAction(buttonCallback);
     add(b_2);
 
     b_3.setXY(262, 230);
@@ -210,9 +220,10 @@ Screen1ViewBase::Screen1ViewBase() :
     b_3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3VIM));
     b_3.setLabelColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     b_3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    b_3.setAction(buttonCallback);
     add(b_3);
 
-    line1.setPosition(252, 0, 15, 272);
+    line1.setPosition(247, 0, 15, 272);
     line1Painter.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     line1.setPainter(line1Painter);
     line1.setStart(0, 0);
@@ -221,18 +232,49 @@ Screen1ViewBase::Screen1ViewBase() :
     line1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(line1);
 
-    scrollList1.setPosition(0, 0, 240, 272);
+    line2.setPosition(0, 239, 247, 27);
+    line2Painter.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    line2.setPainter(line2Painter);
+    line2.setStart(0, 0);
+    line2.setEnd(300, 0);
+    line2.setLineWidth(3);
+    line2.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+    add(line2);
+
+    scrollList1.setPosition(0, 0, 240, 239);
     scrollList1.setHorizontal(false);
     scrollList1.setCircular(false);
     scrollList1.setEasingEquation(touchgfx::EasingEquations::backEaseInOut);
     scrollList1.setSwipeAcceleration(10);
     scrollList1.setDragAcceleration(10);
-    scrollList1.setNumberOfItems(5);
+    scrollList1.setNumberOfItems(1);
     scrollList1.setPadding(0, 0);
     scrollList1.setSnapping(true);
-    scrollList1.setDrawableSize(35, 0);
+    scrollList1.setDrawableSize(30, 0);
     scrollList1.setDrawables(scrollList1ListItems, updateItemCallback);
     add(scrollList1);
+
+    box1.setPosition(0, 241, 247, 31);
+    box1.setColor(touchgfx::Color::getColorFromRGB(20, 224, 255));
+    add(box1);
+
+    textleft.setXY(8, 247);
+    textleft.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textleft.setLinespacing(0);
+    Unicode::snprintf(textleftBuffer, TEXTLEFT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_X3C5).getText());
+    textleft.setWildcard(textleftBuffer);
+    textleft.resizeToCurrentText();
+    textleft.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZVK7));
+    add(textleft);
+
+    textright.setXY(200, 247);
+    textright.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textright.setLinespacing(0);
+    Unicode::snprintf(textrightBuffer, TEXTRIGHT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XPSO).getText());
+    textright.setWildcard(textrightBuffer);
+    textright.resizeToCurrentText();
+    textright.setTypedText(touchgfx::TypedText(T___SINGLEUSE_E69N));
+    add(textright);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
@@ -264,6 +306,83 @@ void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When b_del clicked call virtual function
         //Call callbackhdlr_bdel
         callbackhdlr_bdel();
+    }
+    if (&src == &b_1)
+    {
+        //b1
+        //When b_1 clicked call virtual function
+        //Call callbackhdlr_b1
+        callbackhdlr_b1();
+    }
+    if (&src == &b_2)
+    {
+        //b2
+        //When b_2 clicked call virtual function
+        //Call callbackhdlr_b2
+        callbackhdlr_b2();
+    }
+    if (&src == &b_3)
+    {
+        //b3
+        //When b_3 clicked call virtual function
+        //Call callbackhdlr_b3
+        callbackhdlr_b3();
+    }
+    if (&src == &b_4)
+    {
+        //b4
+        //When b_4 clicked call virtual function
+        //Call callbackhdlr_b4
+        callbackhdlr_b4();
+    }
+    if (&src == &b_5)
+    {
+        //b5
+        //When b_5 clicked call virtual function
+        //Call callbackhdlr_b5
+        callbackhdlr_b5();
+    }
+    if (&src == &b_plus)
+    {
+        //bplus
+        //When b_plus clicked call virtual function
+        //Call callbackhdlr_bplus
+        callbackhdlr_bplus();
+    }
+    if (&src == &b_ac)
+    {
+        //bac
+        //When b_ac clicked call virtual function
+        //Call callbackhdlr_bac
+        callbackhdlr_bac();
+    }
+    if (&src == &b_eq_1)
+    {
+        //beq
+        //When b_eq_1 clicked call virtual function
+        //Call callbackhdlr_beq
+        callbackhdlr_beq();
+    }
+    if (&src == &b_dec)
+    {
+        //bdec
+        //When b_dec clicked call virtual function
+        //Call callbackhdlr_bdec
+        callbackhdlr_bdec();
+    }
+    if (&src == &b_hex)
+    {
+        //bhex
+        //When b_hex clicked call virtual function
+        //Call callbackhdlr_bhex
+        callbackhdlr_bhex();
+    }
+    if (&src == &b_bin)
+    {
+        //bbin
+        //When b_bin clicked call virtual function
+        //Call callbackhdlr_bbin
+        callbackhdlr_bbin();
     }
 }
 

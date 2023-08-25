@@ -13,6 +13,9 @@ public:
     virtual void tearDownScreen();
 
     virtual void callbackhdlr_b0();
+    virtual void callbackhdlr_beq();
+
+    int item_count = 1;
 protected:
 };
 
